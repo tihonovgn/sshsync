@@ -1,0 +1,5 @@
+.idea
+/backup
+config.yml
+*.exe
+*.iml

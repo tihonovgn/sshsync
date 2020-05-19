@@ -1,0 +1,8 @@
+server:
+  host: "localhost"
+  port: 22
+  user: "root"
+
+path:
+  remote: "/home/dev/test/"
+  local: "backup/test/"

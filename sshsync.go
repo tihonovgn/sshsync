@@ -42,7 +42,10 @@ func main() {
 				testDir := filepath.Dir(localFileName)
 				if fileNotExists(testDir) {
 					fmt.Println("Create dir " + testDir)
-					os.Mkdir(testDir, 0644)
+					err = os.MkdirAll(testDir, 0644)
+					if err != nil {
+						fmt.Println(err)
+					}
 				}
 				fmt.Println("Copy remote " + remoteFileName + " to local " + localFileName)
 				err = scp.NewSCP(client).ReceiveFile(remoteFileName, localFileName)
